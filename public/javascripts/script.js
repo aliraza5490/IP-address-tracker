@@ -66,4 +66,7 @@ fetch('https://api.ipify.org?format=json').then(res => {
     let query = { query: res.ip }
     sendQuery(query)
   })
+}).catch((err)=>{
+  console.log(err)
+  alert("One of your chrome extension is interfering. Probably your adblocker.")
 })
